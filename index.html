@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<style>body{margin:0}img{max-width:100%}</style>
+<title>Pubs Stock Adventure</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Mise en page : une planche par campagne, comme une épreuve d'imprimeur — la fiche (comment ça marche, bouton, textes)
+   à gauche, les visuels et vidéos en bande à droite. Couleurs et polices du site Stock Adventure. */
+:root{
+  --fond:#F7F4EE; --carte:#FFFFFF; --texte:#1C3328; --doux:#4F5E55; --trait:#1C332824;
+  --orange:#E86B23; --orange-texte:#1F1D1B; --soleil:#F4E019; --bande:#1C3328; --bande-texte:#F7F4EE;
+  --titres:'Fraunces',Georgia,'Times New Roman',serif; --corps:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --fond:#14231C; --carte:#1B2E25; --texte:#EEF0E8; --doux:#AFBDB3; --trait:#EEF0E824;
+  --bande:#0E1914; --bande-texte:#F7F4EE; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --fond:#14231C; --carte:#1B2E25; --texte:#EEF0E8; --doux:#AFBDB3; --trait:#EEF0E824;
+  --bande:#0E1914; --bande-texte:#F7F4EE; color-scheme:dark}
+body{background:var(--fond);color:var(--texte);font:16px/1.55 var(--corps)}
+.large{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{background:var(--bande);color:var(--bande-texte)}
+header .large{padding-block:40px 36px;display:grid;gap:14px}
+.depart{display:flex;align-items:center;gap:8px}
+.depart i{width:12px;height:12px;border-radius:50%;background:var(--orange)}
+.depart svg{width:160px;height:20px}
+.depart path{fill:none;stroke:currentColor;opacity:.6;stroke-width:2;stroke-dasharray:.1 7;stroke-linecap:round}
+h1{font:500 clamp(34px,5vw,56px)/1.05 var(--titres);margin:0;text-wrap:balance}
+h1 em{font-style:italic}
+.chapeau{max-width:68ch;margin:0;opacity:.92}
+.faits{display:flex;flex-wrap:wrap;gap:8px 22px;margin:6px 0 0;padding:0;list-style:none;font-size:14px;font-weight:600}
+.faits li{display:flex;gap:6px}.faits b{color:var(--soleil);font-weight:600}
+main .large{padding-block:12px 64px;display:grid;gap:56px}
+.change{background:var(--carte);border:1px solid var(--trait);border-radius:6px;padding:20px 22px;display:grid;gap:8px}
+.change h2{font:600 15px/1.2 var(--corps);letter-spacing:.06em;text-transform:uppercase;margin:0;color:var(--doux)}
+.change ul{margin:0;padding-left:18px;display:grid;gap:4px}
+section.campagne{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:28px;align-items:start;border-top:2px solid var(--texte);padding-top:22px}
+@media (max-width:900px){section.campagne{grid-template-columns:minmax(0,1fr)}}
+.fiche{display:grid;gap:14px;min-width:0}
+.fiche h2{font:500 30px/1.1 var(--titres);margin:0;text-wrap:balance}
+.meta{display:flex;flex-wrap:wrap;gap:6px}
+.puce{font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;border:1px solid var(--trait);font-variant-numeric:tabular-nums}
+.puce.budget{background:var(--orange);color:var(--orange-texte);border-color:var(--orange)}
+dl{margin:0;display:grid;gap:12px}
+dt{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--doux)}
+dd{margin:2px 0 0}
+dd ol{margin:4px 0 0;padding-left:20px;display:grid;gap:3px}
+.bouton-pub{display:inline-block;background:var(--orange);color:var(--orange-texte);font-weight:700;padding:4px 12px;border-radius:4px;font-size:14px}
+.manque{border-left:3px solid var(--orange);padding:8px 12px;background:var(--carte);font-size:15px}
+.manque b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}
+.hypo{font-size:14px;color:var(--doux)}
+.galerie{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;min-width:0}
+figure{margin:0;display:grid;gap:6px}
+figure img,figure video{width:100%;max-width:100%;display:block;border-radius:4px;background:#000}
+figcaption{font-size:13px;color:var(--doux)}
+figcaption b{color:var(--texte);font-weight:600}
+.video{grid-column:span 1}
+footer{border-top:1px solid var(--trait)}
+footer .large{padding-block:20px 32px;font-size:14px;color:var(--doux)}
+@media (prefers-reduced-motion:reduce){video{animation:none}}
+</style>
+
+</head><body><header><div class="large">
+  <div class="depart" aria-hidden="true"><i></i><svg viewBox="0 0 160 20"><path d="M2 12 C 18 12, 22 4, 38 5 S 62 16, 80 13 S 100 3, 118 6 S 138 12, 158 9"/></svg></div>
+  <h1>Les pubs Facebook et Instagram de <em>Stock Adventure</em></h1>
+  <p class="chapeau">Les visuels, les vidéos et les textes proposés pour le compte publicitaire Stock Adventure. Rien n'est encore créé dans Meta : cette page sert à valider avant de lancer.</p>
+  <ul class="faits">
+    <li>Budget <b>35 €/jour</b></li>
+    <li>Rayon <b>~25 km</b> autour de Libramont et de Florenville</li>
+    <li>Version <b>3</b> · 3 novembre 2026</li>
+  </ul>
+</div></header>
+
+<main><div class="large">
+
+<div class="change">
+  <h2>Ce qui change dans cette version</h2>
+  <ul>
+    <li>Stéphanie au chapeau ouvre le British Day ; photos claires de l'équipe et photos de campagne Barbour.</li>
+    <li>Le −15 % est très grand, avec le logo Barbour dedans.</li>
+    <li>Chaque visuel dit où aller : magasin, ville, adresse, en bas de l'image.</li>
+    <li>Les éléments du site : départ du sentier, étoiles Google, boussole, tampon « Depuis 1996 ».</li>
+    <li>Vidéos rapides, texte qui monte, −15 % qui arrive en rebond, têtes jamais coupées.</li>
+    <li>Un seul bouton par visuel, avec le même mot que le bouton de la pub.</li>
+  </ul>
+</div>
+
+<section class="campagne" id="british-day">
+  <div class="fiche">
+    <h2>British Day</h2>
+    <div class="meta"><span class="puce budget">15 €/jour</span><span class="puce">3/11 → 7/11 midi</span><span class="puce">Notoriété</span></div>
+    <dl>
+      <div><dt>Comment ça marche</dt><dd><ol><li>La personne voit la vidéo ou l'image dans son fil, ses stories ou ses reels.</li><li>Elle touche <span class="bouton-pub">Intéressé(e)</span> : l'événement British Day s'ajoute à son Facebook.</li><li>Facebook lui rappelle l'événement avant samedi.</li></ol></dd></div>
+      <div><dt>Texte de la pub</dt><dd>Samedi 7 novembre, c'est British Day chez Stock Adventure : −15 % sur Barbour International.</dd></div>
+      <div><dt>Titre</dt><dd>British Day · samedi 7/11</dd></div>
+      <div><dt>En plus, dans la story</dt><dd>Un sondage : « Samedi, vous venez pour… la veste cirée / la doudoune ? » <span class="hypo">Option à vérifier dans le Gestionnaire de pubs.</span></dd></div>
+    </dl>
+    <div class="manque"><b>Il manque</b>Le lien de l'événement Facebook, le ou les magasins, les horaires.</div>
+  </div>
+  <div class="galerie">
+    <figure class="video"><video src="vid/VID-BD-BRITISH-DAY-STORY.mp4" poster="img/BD-1-BRITISH-DAY-STORY.jpg" controls muted loop playsinline preload="metadata"></video><figcaption><b>Vidéo</b> · story et reel</figcaption></figure>
+    <figure class="video"><video src="vid/VID-BD-BRITISH-DAY-FIL.mp4" poster="img/BD-1-BRITISH-DAY-FIL.jpg" controls muted loop playsinline preload="metadata"></video><figcaption><b>Vidéo</b> · fil</figcaption></figure>
+    <figure><img src="img/BD-1-BRITISH-DAY-FIL.jpg" alt="British Day, Stéphanie au chapeau, −15 % sur Barbour International" loading="lazy"><figcaption><b>Image 1</b> · fil</figcaption></figure>
+    <figure><img src="img/BD-2-BRITISH-DAY-FIL.jpg" alt="British Day, vendeuse en doudoune Barbour International" loading="lazy"><figcaption><b>Image 2</b> · fil</figcaption></figure>
+    <figure><img src="img/BD-3-BRITISH-DAY-FIL.jpg" alt="British Day, photo de campagne Barbour" loading="lazy"><figcaption><b>Image 3</b> · fil</figcaption></figure>
+    <figure><img src="img/BD-1-BRITISH-DAY-CARRE.jpg" alt="British Day, format carré" loading="lazy"><figcaption><b>Image 1</b> · carré</figcaption></figure>
+    <figure><img src="img/BD-2-BRITISH-DAY-CARRE.jpg" alt="British Day, format carré" loading="lazy"><figcaption><b>Image 2</b> · carré</figcaption></figure>
+    <figure><img src="img/BD-3-BRITISH-DAY-CARRE.jpg" alt="British Day, format carré" loading="lazy"><figcaption><b>Image 3</b> · carré</figcaption></figure>
+    <figure><img src="img/BD-1-BRITISH-DAY-STORY.jpg" alt="British Day, format story" loading="lazy"><figcaption><b>Image 1</b> · story</figcaption></figure>
+    <figure><img src="img/BD-2-BRITISH-DAY-STORY.jpg" alt="British Day, format story" loading="lazy"><figcaption><b>Image 2</b> · story</figcaption></figure>
+    <figure><img src="img/BD-3-BRITISH-DAY-STORY.jpg" alt="British Day, format story" loading="lazy"><figcaption><b>Image 3</b> · story</figcaption></figure>
+  </div>
+</section>
+
+<section class="campagne" id="magasins">
+  <div class="fiche">
+    <h2>Magasins</h2>
+    <div class="meta"><span class="puce budget">10 €/jour</span><span class="puce">En continu</span><span class="puce">Notoriété</span></div>
+    <dl>
+      <div><dt>Comment ça marche</dt><dd><ol><li>La personne voit un carrousel : une carte par magasin et par rayon, qu'elle fait glisser.</li><li>Elle touche <span class="bouton-pub">Itinéraire</span> : son GPS s'ouvre vers le magasin.</li></ol></dd></div>
+      <div><dt>Texte de la pub</dt><dd>Chasse, randonnée, camping : les grandes marques outdoor, à essayer en vrai à Libramont et à Florenville. On vous conseille sur place.</dd></div>
+      <div><dt>Titre</dt><dd>Stock Adventure · Libramont et Florenville</dd></div>
+    </dl>
+  </div>
+  <div class="galerie">
+    <figure><img src="img/MAG-1-LIBRAMONT-FIL.jpg" alt="Carte Libramont" loading="lazy"><figcaption><b>Carte 1</b> · Libramont</figcaption></figure>
+    <figure><img src="img/MAG-2-FLORENVILLE-FIL.jpg" alt="Carte Florenville" loading="lazy"><figcaption><b>Carte 2</b> · Florenville</figcaption></figure>
+    <figure><img src="img/MAG-3-CHAUSSURES-FIL.jpg" alt="Carte chaussures de randonnée" loading="lazy"><figcaption><b>Carte 3</b> · chaussures</figcaption></figure>
+    <figure><img src="img/MAG-4-CHASSE-FIL.jpg" alt="Carte rayon chasse" loading="lazy"><figcaption><b>Carte 4</b> · chasse, Libramont</figcaption></figure>
+    <figure><img src="img/MAG-1-LIBRAMONT-CARRE.jpg" alt="Libramont, carré" loading="lazy"><figcaption><b>Carte 1</b> · carré</figcaption></figure>
+    <figure><img src="img/MAG-2-FLORENVILLE-CARRE.jpg" alt="Florenville, carré" loading="lazy"><figcaption><b>Carte 2</b> · carré</figcaption></figure>
+    <figure><img src="img/MAG-3-CHAUSSURES-CARRE.jpg" alt="Chaussures, carré" loading="lazy"><figcaption><b>Carte 3</b> · carré</figcaption></figure>
+    <figure><img src="img/MAG-4-CHASSE-CARRE.jpg" alt="Chasse, carré" loading="lazy"><figcaption><b>Carte 4</b> · carré</figcaption></figure>
+  </div>
+</section>
+
+<section class="campagne" id="cheques">
+  <div class="fiche">
+    <h2>Chèques cadeaux</h2>
+    <div class="meta"><span class="puce budget">5 puis 10 €/jour</span><span class="puce">15/11 → 24/12</span><span class="puce">Trafic</span></div>
+    <dl>
+      <div><dt>Comment ça marche</dt><dd><ol><li>La personne touche <span class="bouton-pub">Commander</span>.</li><li>Elle arrive sur la page Chèques cadeaux du site et remplit le formulaire.</li><li>Le chèque est envoyé par e-mail.</li></ol></dd></div>
+      <div><dt>Texte de la pub</dt><dd>Le cadeau qui tombe juste : un chèque cadeau Stock Adventure, valable un an à Libramont et à Florenville, envoyé par e-mail.</dd></div>
+    </dl>
+    <div class="manque"><b>À savoir</b>Cette pub part seulement quand stockadventure.be montre le nouveau site.</div>
+  </div>
+  <div class="galerie">
+    <figure><img src="img/CHQ-1-CHEQUE-FIL.jpg" alt="Chèque cadeau, fil" loading="lazy"><figcaption><b>Fil</b></figcaption></figure>
+    <figure><img src="img/CHQ-1-CHEQUE-CARRE.jpg" alt="Chèque cadeau, carré" loading="lazy"><figcaption><b>Carré</b></figcaption></figure>
+    <figure><img src="img/CHQ-1-CHEQUE-STORY.jpg" alt="Chèque cadeau, story" loading="lazy"><figcaption><b>Story</b></figcaption></figure>
+  </div>
+</section>
+
+<section class="campagne" id="reciblage">
+  <div class="fiche">
+    <h2>Reciblage</h2>
+    <div class="meta"><span class="puce budget">5 €/jour</span><span class="puce">En continu</span><span class="puce">Gens qui connaissent la page (12 mois)</span></div>
+    <dl>
+      <div><dt>Comment ça marche</dt><dd><ol><li>La vidéo « On vous attend en magasin » passe chez les gens qui ont aimé, commenté ou regardé la page.</li><li>Ils touchent <span class="bouton-pub">Itinéraire</span> : le GPS s'ouvre vers le magasin.</li></ol></dd></div>
+      <div><dt>Texte de la pub</dt><dd>On vous attend en magasin. Libramont et Florenville : venez essayer, on vous conseille.</dd></div>
+    </dl>
+  </div>
+  <div class="galerie">
+    <figure class="video"><video src="vid/VID-MAG-ON-VOUS-ATTEND-STORY.mp4" poster="img/RECIB-1-ON-VOUS-ATTEND-STORY.jpg" controls muted loop playsinline preload="metadata"></video><figcaption><b>Vidéo</b> · story et reel</figcaption></figure>
+    <figure class="video"><video src="vid/VID-MAG-ON-VOUS-ATTEND-FIL.mp4" poster="img/RECIB-1-ON-VOUS-ATTEND-FIL.jpg" controls muted loop playsinline preload="metadata"></video><figcaption><b>Vidéo</b> · fil</figcaption></figure>
+    <figure><img src="img/RECIB-1-ON-VOUS-ATTEND-FIL.jpg" alt="On vous attend en magasin, fil" loading="lazy"><figcaption><b>Image</b> · fil</figcaption></figure>
+    <figure><img src="img/RECIB-1-ON-VOUS-ATTEND-CARRE.jpg" alt="On vous attend en magasin, carré" loading="lazy"><figcaption><b>Image</b> · carré</figcaption></figure>
+  </div>
+</section>
+
+</div></main>
+<footer><div class="large">Vidéos sans son : la musique se choisit dans Meta. Adresses : Stock Adventure Libramont, Rue du Flosse 17, 6800 Libramont-Chevigny · Stock Adventure Florenville, Place Albert 1er 12, 6820 Florenville.</div></footer>
+
+</body></html>
