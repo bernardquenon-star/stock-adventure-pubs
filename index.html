@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
 <style>body{margin:0}img{max-width:100%}</style>
-<title>Pubs Stock Adventure</title>
+<title>Campagnes Stock Adventure</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap">
@@ -57,6 +57,18 @@ figure img,figure video{width:100%;max-width:100%;display:block;border-radius:4p
 figcaption{font-size:13px;color:var(--doux)}
 figcaption b{color:var(--texte);font-weight:600}
 .video{grid-column:span 1}
+.puce.actif{background:var(--texte);color:var(--fond);border-color:var(--texte)}
+.puce.fini{border-style:dashed}
+.chiffres{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(130px,100%),1fr));gap:10px;margin:0}
+.chiffres div{background:var(--carte);border:1px solid var(--trait);border-radius:6px;padding:10px 12px}
+.chiffres dt{font-size:11px}
+.chiffres dd{font:600 22px/1.15 var(--titres);font-variant-numeric:tabular-nums}
+.chiffres dd small{display:block;font:400 13px/1.35 var(--corps);color:var(--doux)}
+.bilan{display:grid;gap:14px}
+.bilan h2{font:500 30px/1.1 var(--titres);margin:0}
+.bilan p{margin:0;color:var(--doux);font-size:14px}
+.longue{max-height:720px;overflow-y:auto;border:1px solid var(--trait);border-radius:6px;background:var(--carte);max-width:390px}
+.longue img{display:block;width:100%;border-radius:0}
 footer{border-top:1px solid var(--trait)}
 footer .large{padding-block:20px 32px;font-size:14px;color:var(--doux)}
 @media (prefers-reduced-motion:reduce){video{animation:none}}
@@ -64,25 +76,42 @@ footer .large{padding-block:20px 32px;font-size:14px;color:var(--doux)}
 
 </head><body><header><div class="large">
   <div class="depart" aria-hidden="true"><i></i><svg viewBox="0 0 160 20"><path d="M2 12 C 18 12, 22 4, 38 5 S 62 16, 80 13 S 100 3, 118 6 S 138 12, 158 9"/></svg></div>
-  <h1>Les pubs Facebook et Instagram de <em>Stock Adventure</em></h1>
-  <p class="chapeau">Les campagnes lancées le 4 novembre 2026 sur Facebook et Instagram, avec leurs visuels, leurs textes et leurs réglages. Plus bas : les autres visuels et les vidéos préparés.</p>
+  <h1>Les campagnes de <em>Stock Adventure</em></h1>
+  <p class="chapeau">Les pubs Facebook et Instagram lancées le 4 novembre 2026 et la newsletter British Day : visuels, textes, réglages et résultats. Plus bas : les autres visuels et les vidéos préparés.</p>
   <ul class="faits">
-    <li>Budget <b>30 €/jour</b> (15 + 10 + 5)</li>
+    <li>Budget aujourd'hui <b>15 €/jour</b> (Magasins 10 + Reciblage 5)</li>
     <li>Rayon <b>40 km</b> autour de Libramont et de Florenville</li>
-    <li>Mise à jour <b>4 novembre 2026</b></li>
+    <li>Mise à jour <b>15 novembre 2026</b></li>
   </ul>
 </div></header>
 
 <main><div class="large">
 
+<section class="bilan" id="bilan">
+  <h2>Le bilan au 14 novembre</h2>
+  <dl class="chiffres">
+    <div><dt>Pubs Meta · dépensé</dt><dd>105,82 €<small>du 4 au 14 novembre, 3 campagnes</small></dd></div>
+    <div><dt>Pubs Meta · affichages</dt><dd>101 549<small>sur Facebook et Instagram</small></dd></div>
+    <div><dt>Newsletter · envoyée à</dt><dd>5 729<small>clients, le 4 novembre à 19 h</small></dd></div>
+    <div><dt>Newsletter · ouverte par</dt><dd>1 572<small>31,5 % des e-mails arrivés</small></dd></div>
+  </dl>
+  <p>Chiffres Meta lus dans le Gestionnaire de publicités le 15 novembre 2026. Chiffres de la newsletter lus dans Brevo le 6 novembre 2026.</p>
+</section>
+
 <section class="campagne" id="british-day">
   <div class="fiche">
     <h2>1 · British Day</h2>
-    <div class="meta"><span class="puce budget">15 €/jour</span><span class="puce">4/11 → dimanche 8/11 18 h</span><span class="puce">Notoriété</span><span class="puce">40 km</span></div>
+    <div class="meta"><span class="puce fini">■ Terminée</span><span class="puce budget">15 €/jour</span><span class="puce">4/11 → dimanche 8/11 18 h</span><span class="puce">Notoriété</span><span class="puce">40 km</span></div>
     <dl>
       <div><dt>Comment ça marche</dt><dd><ol><li>La personne voit l'image dans son fil, ses stories ou ses reels, sur Facebook et Instagram.</li><li>Elle touche <span class="bouton-pub">En savoir plus</span> : elle arrive sur l'événement Facebook British Day.</li></ol></dd></div>
       <div><dt>Texte de la pub</dt><dd>British Day chez Stock Adventure : −15 % sur les marques British.<br>Barbour, Barbour International, Foxford et London Tradition dans nos deux magasins. William Lockie, Aran et Ireland's Eye à Libramont.<br>Libramont : samedi 7 novembre.<br>Florenville : samedi 7 et dimanche 8 novembre.<br>Thé et biscuits offerts. Venez nombreux !</dd></div>
       <div><dt>Titre</dt><dd>British Day : −15 % sur les marques British</dd></div>
+      <div><dt>Résultats</dt><dd><dl class="chiffres">
+        <div><dt>Dépensé</dt><dd>45,45 €</dd></div>
+        <div><dt>Personnes touchées</dt><dd>30 058</dd></div>
+        <div><dt>Affichages</dt><dd>44 871</dd></div>
+      </dl></dd></div>
+      <div><dt>Par visuel</dt><dd>Meta a surtout montré les deux visuels hommes : BD-7 « So British » 29,08 € et 22 460 personnes ; BD-8 « automne » 14,87 € et 12 767 personnes ; BD-4 Stéphanie 1,50 € et 1 789 personnes.</dd></div>
     </dl>
   </div>
   <div class="galerie">
@@ -101,11 +130,16 @@ footer .large{padding-block:20px 32px;font-size:14px;color:var(--doux)}
 <section class="campagne" id="magasins">
   <div class="fiche">
     <h2>2 · Magasins</h2>
-    <div class="meta"><span class="puce budget">10 €/jour</span><span class="puce">En continu</span><span class="puce">Notoriété</span><span class="puce">40 km</span></div>
+    <div class="meta"><span class="puce actif">✓ Active</span><span class="puce budget">10 €/jour</span><span class="puce">En continu</span><span class="puce">Notoriété</span><span class="puce">40 km</span></div>
     <dl>
       <div><dt>Comment ça marche</dt><dd><ol><li>La personne voit l'image du magasin de Libramont.</li><li>Elle touche la pub : elle arrive sur la page Libramont de stockadventure.be.</li></ol></dd></div>
       <div><dt>Texte de la pub</dt><dd>Chasse, randonnée, camping : tout l'outdoor, à essayer en vrai.<br>Plus de 60 marques et les conseils de notre équipe, dans nos magasins de Libramont et de Florenville.<br>Stock Adventure Libramont : Rue du Flosse 17.</dd></div>
       <div><dt>Titre</dt><dd>Plus de 60 marques, à essayer en vrai</dd></div>
+      <div><dt>Résultats du 4 au 14 novembre</dt><dd><dl class="chiffres">
+        <div><dt>Dépensé</dt><dd>37,34 €</dd></div>
+        <div><dt>Personnes touchées</dt><dd>29 151</dd></div>
+        <div><dt>Affichages</dt><dd>36 041</dd></div>
+      </dl></dd></div>
     </dl>
   </div>
   <div class="galerie">
@@ -118,20 +152,46 @@ footer .large{padding-block:20px 32px;font-size:14px;color:var(--doux)}
 <section class="campagne" id="reciblage-en-ligne">
   <div class="fiche">
     <h2>3 · Reciblage</h2>
-    <div class="meta"><span class="puce budget">5 €/jour</span><span class="puce">En continu</span><span class="puce">Clients + fans des pages</span><span class="puce">40 km</span></div>
+    <div class="meta"><span class="puce actif">✓ Active</span><span class="puce budget">5 €/jour</span><span class="puce">En continu</span><span class="puce">Clients + fans des pages</span><span class="puce">40 km</span></div>
     <dl>
       <div><dt>Qui la voit</dt><dd>Les clients de Stock Adventure (fichier de 5 723 adresses e-mail, chiffrées par Meta) et les personnes qui ont interagi avec les pages Facebook de Libramont et de Florenville depuis un an.</dd></div>
       <div><dt>Jusqu'au 8 novembre</dt><dd>Elle montre l'offre British Day (même visuel et même texte que la campagne 1), avec un lien vers stockadventure.be.</dd></div>
-      <div><dt>Ensuite</dt><dd>Les visuels ci-contre : Stéphanie, le magasin de Libramont, Florenville ouvert le dimanche.</dd></div>
+      <div><dt>Aujourd'hui</dt><dd>Un seul visuel tourne : Stéphanie, « on vous conseille ». Libramont et Florenville (ouvert le dimanche) sont prêts mais pas encore ajoutés.</dd></div>
+      <div><dt>Résultats du 4 au 14 novembre</dt><dd><dl class="chiffres">
+        <div><dt>Dépensé</dt><dd>23,03 €</dd></div>
+        <div><dt>Personnes touchées</dt><dd>17 341</dd></div>
+        <div><dt>Affichages</dt><dd>20 637</dd></div>
+      </dl></dd></div>
     </dl>
   </div>
   <div class="galerie">
-    <figure><img src="img/RECIB-2-STEPHANIE-FIL.jpg" alt="Passez nous voir, on vous conseille" loading="lazy"><figcaption><b>Stéphanie</b> · fil</figcaption></figure>
-    <figure><img src="img/RECIB-3-LIBRAMONT-FIL.jpg" alt="Plus de 60 marques à essayer en vrai, Libramont" loading="lazy"><figcaption><b>Libramont</b> · fil</figcaption></figure>
-    <figure><img src="img/RECIB-4-FLORENVILLE-FIL.jpg" alt="Florenville, ouvert aussi le dimanche" loading="lazy"><figcaption><b>Florenville</b> · fil</figcaption></figure>
-    <figure><img src="img/RECIB-2-STEPHANIE-STORY.jpg" alt="Stéphanie, story" loading="lazy"><figcaption><b>Stéphanie</b> · story</figcaption></figure>
-    <figure><img src="img/RECIB-3-LIBRAMONT-STORY.jpg" alt="Libramont, story" loading="lazy"><figcaption><b>Libramont</b> · story</figcaption></figure>
-    <figure><img src="img/RECIB-4-FLORENVILLE-STORY.jpg" alt="Florenville, story" loading="lazy"><figcaption><b>Florenville</b> · story</figcaption></figure>
+    <figure><img src="img/RECIB-2-STEPHANIE-FIL.jpg" alt="Passez nous voir, on vous conseille" loading="lazy"><figcaption><b>En ligne</b> · Stéphanie · fil</figcaption></figure>
+    <figure><img src="img/RECIB-3-LIBRAMONT-FIL.jpg" alt="Plus de 60 marques à essayer en vrai, Libramont" loading="lazy"><figcaption><b>Prêt</b> · Libramont · fil</figcaption></figure>
+    <figure><img src="img/RECIB-4-FLORENVILLE-FIL.jpg" alt="Florenville, ouvert aussi le dimanche" loading="lazy"><figcaption><b>Prêt</b> · Florenville · fil</figcaption></figure>
+    <figure><img src="img/RECIB-2-STEPHANIE-STORY.jpg" alt="Stéphanie, story" loading="lazy"><figcaption><b>En ligne</b> · Stéphanie · story</figcaption></figure>
+    <figure><img src="img/RECIB-3-LIBRAMONT-STORY.jpg" alt="Libramont, story" loading="lazy"><figcaption><b>Prêt</b> · Libramont · story</figcaption></figure>
+    <figure><img src="img/RECIB-4-FLORENVILLE-STORY.jpg" alt="Florenville, story" loading="lazy"><figcaption><b>Prêt</b> · Florenville · story</figcaption></figure>
+  </div>
+</section>
+
+<section class="campagne" id="newsletter-british-day">
+  <div class="fiche">
+    <h2>4 · Newsletter British Day</h2>
+    <div class="meta"><span class="puce fini">■ Envoyée</span><span class="puce">4/11 à 19 h</span><span class="puce">Brevo</span><span class="puce">5 729 clients</span></div>
+    <dl>
+      <div><dt>Comment ça marche</dt><dd><ol><li>Les clients qui ont accepté de recevoir les nouvelles de Stock Adventure reçoivent l'e-mail, de la part de « Stock Adventure » &lt;info@stockadventure.be&gt;.</li><li>Ils voient l'offre −15 %, les marques, les deux magasins et leurs horaires, et le lien vers l'événement.</li></ol></dd></div>
+      <div><dt>Objet de l'e-mail</dt><dd>Ce samedi, −15 % sur Barbour… et le thé est offert</dd></div>
+      <div><dt>Résultats</dt><dd><dl class="chiffres">
+        <div><dt>Arrivés</dt><dd>4 983<small>sur 5 729 envoyés</small></dd></div>
+        <div><dt>Ouverts</dt><dd>1 572<small>31,5 %</small></dd></div>
+        <div><dt>Clics</dt><dd>150<small>3,0 %</small></dd></div>
+        <div><dt>Désinscrits</dt><dd>43<small>0,9 %</small></dd></div>
+      </dl></dd></div>
+      <div class="manque"><b>À savoir</b>619 adresses n'existent plus (11 % du fichier) : Brevo les a écartées, elles ne recevront plus rien.</div>
+    </dl>
+  </div>
+  <div class="galerie" style="grid-template-columns:minmax(0,390px)">
+    <figure><div class="longue"><img src="img/NL-BRITISH-DAY-TELEPHONE.jpg" alt="La newsletter British Day telle qu'elle s'affiche sur un téléphone" loading="lazy"></div><figcaption><b>Envoyée</b> · vue sur téléphone (faites défiler)</figcaption></figure>
   </div>
 </section>
 
@@ -183,7 +243,7 @@ footer .large{padding-block:20px 32px;font-size:14px;color:var(--doux)}
 <section class="campagne" id="cheques">
   <div class="fiche">
     <h2>Chèques cadeaux</h2>
-    <div class="meta"><span class="puce">Pas en ligne</span><span class="puce">Prévu du 15/11 au 24/12</span></div>
+    <div class="meta"><span class="puce">Pas en ligne</span><span class="puce">Prévu du 15/11 au 24/12, pas encore lancé</span></div>
     <dl>
       <div><dt>Comment ça marche</dt><dd><ol><li>La personne touche <span class="bouton-pub">Commander</span>.</li><li>Elle arrive sur la page Chèques cadeaux du site et remplit le formulaire.</li><li>Le chèque est envoyé par e-mail.</li></ol></dd></div>
       <div><dt>Texte de la pub</dt><dd>Le cadeau qui tombe juste : un chèque cadeau Stock Adventure, valable un an à Libramont et à Florenville, envoyé par e-mail.</dd></div>
