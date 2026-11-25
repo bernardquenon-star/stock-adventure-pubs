@@ -69,6 +69,15 @@ figcaption b{color:var(--texte);font-weight:600}
 .bilan p{margin:0;color:var(--doux);font-size:14px}
 .longue{max-height:720px;overflow-y:auto;border:1px solid var(--trait);border-radius:6px;background:var(--carte);max-width:390px}
 .longue img{display:block;width:100%;border-radius:0}
+table.bilan-pubs{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums;background:var(--carte);border:1px solid var(--trait);border-radius:6px}
+table.bilan-pubs th,table.bilan-pubs td{padding:9px 10px;border-bottom:1px solid var(--trait);text-align:left;vertical-align:top}
+table.bilan-pubs th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--doux);font-weight:700}
+table.bilan-pubs td.n{text-align:right;white-space:nowrap}
+table.bilan-pubs tr:last-child td{border-bottom:0}
+.tableau{overflow-x:auto;max-width:100%}
+.ok{font-weight:700}.pasok{font-weight:700;color:var(--orange)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .pasok{color:#F59A5C}}
+:root[data-theme="dark"] .pasok{color:#F59A5C}
 footer{border-top:1px solid var(--trait)}
 footer .large{padding-block:20px 32px;font-size:14px;color:var(--doux)}
 @media (prefers-reduced-motion:reduce){video{animation:none}}
@@ -77,31 +86,61 @@ footer .large{padding-block:20px 32px;font-size:14px;color:var(--doux)}
 </head><body><header><div class="large">
   <div class="depart" aria-hidden="true"><i></i><svg viewBox="0 0 160 20"><path d="M2 12 C 18 12, 22 4, 38 5 S 62 16, 80 13 S 100 3, 118 6 S 138 12, 158 9"/></svg></div>
   <h1>Les campagnes de <em>Stock Adventure</em></h1>
-  <p class="chapeau">Les pubs Facebook et Instagram lancées le 4 novembre 2026 et la newsletter British Day : visuels, textes, réglages et résultats. Plus bas : les autres visuels et les vidéos préparés.</p>
+  <p class="chapeau">Les pubs Facebook et Instagram depuis le 4 novembre 2026 et la newsletter British Day : ce qu'elles ont rapporté, ce qu'elles n'ont pas rapporté, leurs dates de fin, puis le détail de chaque campagne. Plus bas : les autres visuels et les vidéos préparés.</p>
   <ul class="faits">
-    <li>Budget aujourd'hui <b>15 €/jour</b> (Magasins 10 + Reciblage 5)</li>
+    <li>Budget aujourd'hui <b>20 €/jour</b> (Magasins 10 + Chèques cadeaux 10)</li>
     <li>Rayon <b>40 km</b> autour de Libramont et de Florenville</li>
-    <li>Mise à jour <b>15 novembre 2026</b></li>
+    <li>Mise à jour <b>25 novembre 2026</b></li>
   </ul>
 </div></header>
 
 <main><div class="large">
 
 <section class="bilan" id="bilan">
-  <h2>Le bilan au 14 novembre</h2>
+  <h2>Le bilan au 25 novembre</h2>
   <dl class="chiffres">
-    <div><dt>Pubs Meta · dépensé</dt><dd>105,82 €<small>du 4 au 14 novembre, 3 campagnes</small></dd></div>
-    <div><dt>Pubs Meta · affichages</dt><dd>101 549<small>sur Facebook et Instagram</small></dd></div>
-    <div><dt>Newsletter · envoyée à</dt><dd>5 729<small>clients, le 4 novembre à 19 h</small></dd></div>
-    <div><dt>Newsletter · ouverte par</dt><dd>1 572<small>31,5 % des e-mails arrivés</small></dd></div>
+    <div><dt>Pubs Meta · dépensé</dt><dd>263,91 €<small>du 4 au 25 novembre, 4 campagnes</small></dd></div>
+    <div><dt>Pubs Meta · affichages</dt><dd>263 603<small>sur Facebook et Instagram</small></dd></div>
+    <div><dt>Pubs Meta · clics sur le lien</dt><dd>401<small>vers le site ou l'événement British Day</small></dd></div>
+    <div><dt>Newsletter · ouverte par</dt><dd>1 572<small>31,5 % des e-mails arrivés, 150 clics</small></dd></div>
   </dl>
-  <p>Chiffres Meta lus dans le Gestionnaire de publicités le 15 novembre 2026. Chiffres de la newsletter lus dans Brevo le 6 novembre 2026.</p>
+  <p>Chiffres Meta lus dans le Gestionnaire de publicités le 25 novembre 2026 vers 19 h 30, pub par pub. Chiffres de la newsletter lus dans Brevo le 6 novembre 2026.</p>
+</section>
+
+<section class="bilan" id="rapporte">
+  <h2>Ce qu'elles ont rapporté, et pas rapporté</h2>
+  <div class="tableau"><table class="bilan-pubs">
+    <thead><tr><th>Pub</th><th>Dépensé</th><th>Personnes touchées</th><th>Clics sur le lien</th><th>Coût d'un clic</th><th>Visites du site comptées</th><th>Verdict</th></tr></thead>
+    <tbody>
+      <tr><td><b>MAG-1</b> Magasins, Libramont</td><td class="n">144,56 €</td><td class="n">72 573</td><td class="n">230</td><td class="n">0,63 €</td><td class="n">15</td><td><span class="ok">✓ OK</span> pour se faire connaître : vue 2 fois par personne en moyenne. <span class="pasok">✗ Pas OK</span> pour amener du monde sur le site.</td></tr>
+      <tr><td><b>RECIB-2</b> Reciblage, clients</td><td class="n">72,18 €</td><td class="n">37 522</td><td class="n">109</td><td class="n">0,66 €</td><td class="n">7</td><td><span class="pasok">✗ Pas OK</span> : malgré son nom, elle montrait l'offre British Day. Du 9 au 24 novembre, elle a dépensé <b>71,48 €</b> pour une promo déjà terminée. Éteinte le 24/11.</td></tr>
+      <tr><td><b>BD-4, BD-7, BD-8</b> British Day</td><td class="n">45,45 €</td><td class="n">30 058</td><td class="n">55</td><td class="n">0,83 €</td><td class="n">—</td><td><span class="ok">✓ OK</span> : 30 058 personnes en 5 jours, avant le week-end. Le lien menait à l'événement Facebook, pas au site.</td></tr>
+      <tr><td><b>CHQ-1</b> Chèques cadeaux</td><td class="n">1,72 €</td><td class="n">445</td><td class="n">7</td><td class="n">0,25 €</td><td class="n">7</td><td>Lancée le 24/11 : trop tôt pour juger. Le meilleur coût par visite de toutes les pubs (0,25 €).</td></tr>
+      <tr><td><b>Newsletter</b> British Day</td><td class="n">—</td><td class="n">4 983 reçus</td><td class="n">150</td><td class="n">—</td><td class="n">—</td><td><span class="ok">✓ OK</span> : 31,5 % d'ouvertures. <span class="pasok">✗</span> 619 adresses mortes (11 %).</td></tr>
+    </tbody>
+  </table></div>
+  <div class="manque"><b>Ce qu'on ne sait pas</b>Meta compte les personnes, les affichages et les clics. Il ne voit pas les ventes en magasin : ce que les pubs ont rapporté en caisse n'est pas mesuré. Les chèques cadeaux commandés depuis le 24/11 se lisent dans le back-office : ✗ pas encore vérifié.</div>
+  <p class="hypo">Hypothèse, pas vérifiée : MAG-1 a 230 clics mais seulement 15 visites comptées. Le site ne compte une visite pour Meta qu'après l'accord aux cookies publicitaires : une partie des visites n'est donc pas comptée. Le chiffre réel est entre 15 et 230.</p>
+</section>
+
+<section class="bilan" id="dates-de-fin">
+  <h2>Les dates de fin, réglage par réglage</h2>
+  <div class="tableau"><table class="bilan-pubs">
+    <thead><tr><th>Campagne · ensemble de pubs</th><th>État</th><th>Budget</th><th>Début</th><th>Fin réglée</th><th>À faire</th></tr></thead>
+    <tbody>
+      <tr><td><b>Chèques cadeaux</b> · 40 km Libramont + Florenville</td><td>Active</td><td class="n">10 €/jour</td><td class="n">24/11</td><td><span class="ok">✓ OK</span> 24/12/2026 à 23 h 59</td><td>Vérifier le 25/12 qu'elle est arrêtée, dans le Gestionnaire et dans la Bibliothèque publicitaire.</td></tr>
+      <tr><td><b>Magasins</b> · 40 km Libramont + Florenville</td><td>Active</td><td class="n">10 €/jour</td><td class="n">4/11</td><td><span class="pasok">✗ Pas OK</span> aucune (« Continue »)</td><td>Elle dépense environ 300 € par mois jusqu'à ce qu'on l'arrête. Date de fin à décider par Bernard.</td></tr>
+      <tr><td><b>Reciblage</b> · FB + Insta 40 km</td><td>Campagne allumée, aucune pub allumée</td><td class="n">5 €/jour</td><td class="n">4/11</td><td><span class="pasok">✗ Pas OK</span> aucune</td><td>Ne dépense plus rien. Si on y remet une pub (RECIB-3, RECIB-4), elle repartira sans fin : régler la date en même temps.</td></tr>
+      <tr><td><b>British Day</b> · 40 km Libramont + Florenville</td><td>Désactivée</td><td class="n">15 €/jour</td><td class="n">4/11</td><td><span class="ok">✓ OK</span> 8/11 à 18 h</td><td>Rien. Toutes ses pubs sont éteintes depuis le 24/11 ; plus visible dans la Bibliothèque publicitaire.</td></tr>
+    </tbody>
+  </table></div>
+  <p>La règle depuis le 24/11 : toute pub liée à une date se crée avec sa date de fin, et on l'éteint à la main à cette date. « Finalisé » ne suffit pas : on vérifie chaque pub active et la Bibliothèque publicitaire. Le 25/11, la Bibliothèque publicitaire (Belgique) ne montre que 2 pubs : Magasins et Chèques cadeaux.</p>
 </section>
 
 <section class="campagne" id="british-day">
   <div class="fiche">
     <h2>1 · British Day</h2>
-    <div class="meta"><span class="puce fini">■ Terminée</span><span class="puce budget">15 €/jour</span><span class="puce">4/11 → dimanche 8/11 18 h</span><span class="puce">Notoriété</span><span class="puce">40 km</span></div>
+    <div class="meta"><span class="puce fini">■ Terminée, éteinte</span><span class="puce budget">15 €/jour</span><span class="puce">4/11 → dimanche 8/11 18 h</span><span class="puce">Notoriété</span><span class="puce">40 km</span></div>
     <dl>
       <div><dt>Comment ça marche</dt><dd><ol><li>La personne voit l'image dans son fil, ses stories ou ses reels, sur Facebook et Instagram.</li><li>Elle touche <span class="bouton-pub">En savoir plus</span> : elle arrive sur l'événement Facebook British Day.</li></ol></dd></div>
       <div><dt>Texte de la pub</dt><dd>British Day chez Stock Adventure : −15 % sur les marques British.<br>Barbour, Barbour International, Foxford et London Tradition dans nos deux magasins. William Lockie, Aran et Ireland's Eye à Libramont.<br>Libramont : samedi 7 novembre.<br>Florenville : samedi 7 et dimanche 8 novembre.<br>Thé et biscuits offerts. Venez nombreux !</dd></div>
@@ -110,6 +149,7 @@ footer .large{padding-block:20px 32px;font-size:14px;color:var(--doux)}
         <div><dt>Dépensé</dt><dd>45,45 €</dd></div>
         <div><dt>Personnes touchées</dt><dd>30 058</dd></div>
         <div><dt>Affichages</dt><dd>44 871</dd></div>
+        <div><dt>Clics vers l'événement</dt><dd>55</dd></div>
       </dl></dd></div>
       <div><dt>Par visuel</dt><dd>Meta a surtout montré les deux visuels hommes : BD-7 « So British » 29,08 € et 22 460 personnes ; BD-8 « automne » 14,87 € et 12 767 personnes ; BD-4 Stéphanie 1,50 € et 1 789 personnes.</dd></div>
     </dl>
@@ -130,16 +170,18 @@ footer .large{padding-block:20px 32px;font-size:14px;color:var(--doux)}
 <section class="campagne" id="magasins">
   <div class="fiche">
     <h2>2 · Magasins</h2>
-    <div class="meta"><span class="puce actif">✓ Active</span><span class="puce budget">10 €/jour</span><span class="puce">En continu</span><span class="puce">Notoriété</span><span class="puce">40 km</span></div>
+    <div class="meta"><span class="puce actif">✓ Active</span><span class="puce budget">10 €/jour</span><span class="puce">Sans date de fin</span><span class="puce">Notoriété</span><span class="puce">40 km</span></div>
     <dl>
       <div><dt>Comment ça marche</dt><dd><ol><li>La personne voit l'image du magasin de Libramont.</li><li>Elle touche la pub : elle arrive sur la page Libramont de stockadventure.be.</li></ol></dd></div>
       <div><dt>Texte de la pub</dt><dd>Chasse, randonnée, camping : tout l'outdoor, à essayer en vrai.<br>Plus de 60 marques et les conseils de notre équipe, dans nos magasins de Libramont et de Florenville.<br>Stock Adventure Libramont : Rue du Flosse 17.</dd></div>
       <div><dt>Titre</dt><dd>Plus de 60 marques, à essayer en vrai</dd></div>
-      <div><dt>Résultats du 4 au 14 novembre</dt><dd><dl class="chiffres">
-        <div><dt>Dépensé</dt><dd>37,34 €</dd></div>
-        <div><dt>Personnes touchées</dt><dd>29 151</dd></div>
-        <div><dt>Affichages</dt><dd>36 041</dd></div>
+      <div><dt>Résultats du 4 au 25 novembre</dt><dd><dl class="chiffres">
+        <div><dt>Dépensé</dt><dd>144,56 €</dd></div>
+        <div><dt>Personnes touchées</dt><dd>72 573</dd></div>
+        <div><dt>Affichages</dt><dd>147 189</dd></div>
+        <div><dt>Clics sur le lien</dt><dd>230</dd></div>
       </dl></dd></div>
+      <div class="manque"><b>Date de fin</b>Aucune : elle tourne jusqu'à ce qu'on l'arrête.</div>
     </dl>
   </div>
   <div class="galerie">
@@ -152,31 +194,55 @@ footer .large{padding-block:20px 32px;font-size:14px;color:var(--doux)}
 <section class="campagne" id="reciblage-en-ligne">
   <div class="fiche">
     <h2>3 · Reciblage</h2>
-    <div class="meta"><span class="puce actif">✓ Active</span><span class="puce budget">5 €/jour</span><span class="puce">En continu</span><span class="puce">Clients + fans des pages</span><span class="puce">40 km</span></div>
+    <div class="meta"><span class="puce fini">■ Aucune pub en ligne</span><span class="puce budget">5 €/jour</span><span class="puce">Sans date de fin</span><span class="puce">Clients + fans des pages</span><span class="puce">40 km</span></div>
     <dl>
       <div><dt>Qui la voit</dt><dd>Les clients de Stock Adventure (fichier de 5 723 adresses e-mail, chiffrées par Meta) et les personnes qui ont interagi avec les pages Facebook de Libramont et de Florenville depuis un an.</dd></div>
-      <div><dt>Jusqu'au 8 novembre</dt><dd>Elle montre l'offre British Day (même visuel et même texte que la campagne 1), avec un lien vers stockadventure.be.</dd></div>
-      <div><dt>Aujourd'hui</dt><dd>Un seul visuel tourne : Stéphanie, « on vous conseille ». Libramont et Florenville (ouvert le dimanche) sont prêts mais pas encore ajoutés.</dd></div>
-      <div><dt>Résultats du 4 au 14 novembre</dt><dd><dl class="chiffres">
-        <div><dt>Dépensé</dt><dd>23,03 €</dd></div>
-        <div><dt>Personnes touchées</dt><dd>17 341</dd></div>
-        <div><dt>Affichages</dt><dd>20 637</dd></div>
+      <div><dt>Ce qui a vraiment tourné</dt><dd>Une seule pub, nommée « RECIB-2 Stéphanie · on vous conseille ». Malgré son nom, elle contenait l'image et le texte <b>British Day −15 %</b>. Elle a continué après la fin de l'offre (8/11), jusqu'au 24/11.</dd></div>
+      <div><dt>Aujourd'hui</dt><dd>Éteinte le 24/11 sur l'ordre de Bernard. La campagne ne dépense plus rien. Les visuels Libramont et Florenville (ouvert le dimanche) sont prêts, jamais ajoutés.</dd></div>
+      <div><dt>Résultats du 4 au 24 novembre</dt><dd><dl class="chiffres">
+        <div><dt>Dépensé</dt><dd>72,18 €<small>dont 71,48 € après la fin de l'offre</small></dd></div>
+        <div><dt>Personnes touchées</dt><dd>37 522</dd></div>
+        <div><dt>Affichages</dt><dd>71 081</dd></div>
+        <div><dt>Clics sur le lien</dt><dd>109</dd></div>
       </dl></dd></div>
     </dl>
   </div>
   <div class="galerie">
-    <figure><img src="img/RECIB-2-STEPHANIE-FIL.jpg" alt="Passez nous voir, on vous conseille" loading="lazy"><figcaption><b>En ligne</b> · Stéphanie · fil</figcaption></figure>
+    <figure><img src="img/BD-4-BARBOUR-WEEKEND-FIL.jpg" alt="Le visuel British Day qui tournait sous le nom RECIB-2" loading="lazy"><figcaption><b>Ce qui tournait</b> · British Day, jusqu'au 24/11</figcaption></figure>
+    <figure><img src="img/RECIB-2-STEPHANIE-FIL.jpg" alt="Passez nous voir, on vous conseille" loading="lazy"><figcaption><b>Prévu, jamais en ligne</b> · Stéphanie · fil</figcaption></figure>
     <figure><img src="img/RECIB-3-LIBRAMONT-FIL.jpg" alt="Plus de 60 marques à essayer en vrai, Libramont" loading="lazy"><figcaption><b>Prêt</b> · Libramont · fil</figcaption></figure>
     <figure><img src="img/RECIB-4-FLORENVILLE-FIL.jpg" alt="Florenville, ouvert aussi le dimanche" loading="lazy"><figcaption><b>Prêt</b> · Florenville · fil</figcaption></figure>
-    <figure><img src="img/RECIB-2-STEPHANIE-STORY.jpg" alt="Stéphanie, story" loading="lazy"><figcaption><b>En ligne</b> · Stéphanie · story</figcaption></figure>
     <figure><img src="img/RECIB-3-LIBRAMONT-STORY.jpg" alt="Libramont, story" loading="lazy"><figcaption><b>Prêt</b> · Libramont · story</figcaption></figure>
     <figure><img src="img/RECIB-4-FLORENVILLE-STORY.jpg" alt="Florenville, story" loading="lazy"><figcaption><b>Prêt</b> · Florenville · story</figcaption></figure>
   </div>
 </section>
 
+<section class="campagne" id="cheques">
+  <div class="fiche">
+    <h2>4 · Chèques cadeaux</h2>
+    <div class="meta"><span class="puce actif">✓ Active</span><span class="puce budget">10 €/jour</span><span class="puce">24/11 → 24/12 23 h 59</span><span class="puce">Trafic</span><span class="puce">40 km</span></div>
+    <dl>
+      <div><dt>Comment ça marche</dt><dd><ol><li>La personne voit le chèque cadeau dans son fil, ses stories ou ses reels.</li><li>Elle touche <span class="bouton-pub">Commander</span> : elle arrive sur stockadventure.be/cheques-cadeaux et remplit le formulaire.</li><li>Le chèque est envoyé par e-mail.</li></ol></dd></div>
+      <div><dt>Texte de la pub</dt><dd>Le cadeau qui tombe juste : un chèque cadeau Stock Adventure, valable un an à Libramont et à Florenville, envoyé par e-mail.</dd></div>
+      <div><dt>Titre</dt><dd>Chèque cadeau Stock Adventure</dd></div>
+      <div><dt>Résultats du 24 au 25 novembre</dt><dd><dl class="chiffres">
+        <div><dt>Dépensé</dt><dd>1,72 €</dd></div>
+        <div><dt>Personnes touchées</dt><dd>445</dd></div>
+        <div><dt>Clics sur le lien</dt><dd>7</dd></div>
+        <div><dt>Visites de la page</dt><dd>7<small>0,25 € la visite</small></dd></div>
+      </dl></dd></div>
+    </dl>
+  </div>
+  <div class="galerie">
+    <figure><img src="img/CHQ-1-CHEQUE-CARRE.jpg" alt="Chèque cadeau, carré" loading="lazy"><figcaption><b>En ligne</b> · carré</figcaption></figure>
+    <figure><img src="img/CHQ-1-CHEQUE-STORY.jpg" alt="Chèque cadeau, story" loading="lazy"><figcaption><b>En ligne</b> · story</figcaption></figure>
+    <figure><img src="img/CHQ-1-CHEQUE-FIL.jpg" alt="Chèque cadeau, fil" loading="lazy"><figcaption><b>Variante</b> · fil</figcaption></figure>
+  </div>
+</section>
+
 <section class="campagne" id="newsletter-british-day">
   <div class="fiche">
-    <h2>4 · Newsletter British Day</h2>
+    <h2>5 · Newsletter British Day</h2>
     <div class="meta"><span class="puce fini">■ Envoyée</span><span class="puce">4/11 à 19 h</span><span class="puce">Brevo</span><span class="puce">5 729 clients</span></div>
     <dl>
       <div><dt>Comment ça marche</dt><dd><ol><li>Les clients qui ont accepté de recevoir les nouvelles de Stock Adventure reçoivent l'e-mail, de la part de « Stock Adventure » &lt;info@stockadventure.be&gt;.</li><li>Ils voient l'offre −15 %, les marques, les deux magasins et leurs horaires, et le lien vers l'événement.</li></ol></dd></div>
@@ -198,7 +264,7 @@ footer .large{padding-block:20px 32px;font-size:14px;color:var(--doux)}
 <div class="change">
   <h2>Les autres visuels et les vidéos préparés</h2>
   <ul>
-    <li>Ci-dessous : la première série British Day, les vidéos, les cartes des rayons, le chèque cadeau et « On vous attend en magasin ».</li>
+    <li>Ci-dessous : la première série British Day, les vidéos, les cartes des rayons et « On vous attend en magasin ».</li>
     <li>Ils ne sont pas en ligne aujourd'hui ; ils peuvent servir pour les prochaines campagnes.</li>
   </ul>
 </div>
@@ -237,22 +303,6 @@ footer .large{padding-block:20px 32px;font-size:14px;color:var(--doux)}
     <figure><img src="img/MAG-2-FLORENVILLE-CARRE.jpg" alt="Florenville, carré" loading="lazy"><figcaption><b>Carte 2</b> · carré</figcaption></figure>
     <figure><img src="img/MAG-3-CHAUSSURES-CARRE.jpg" alt="Chaussures, carré" loading="lazy"><figcaption><b>Carte 3</b> · carré</figcaption></figure>
     <figure><img src="img/MAG-4-CHASSE-CARRE.jpg" alt="Chasse, carré" loading="lazy"><figcaption><b>Carte 4</b> · carré</figcaption></figure>
-  </div>
-</section>
-
-<section class="campagne" id="cheques">
-  <div class="fiche">
-    <h2>Chèques cadeaux</h2>
-    <div class="meta"><span class="puce">Pas en ligne</span><span class="puce">Prévu du 15/11 au 24/12, pas encore lancé</span></div>
-    <dl>
-      <div><dt>Comment ça marche</dt><dd><ol><li>La personne touche <span class="bouton-pub">Commander</span>.</li><li>Elle arrive sur la page Chèques cadeaux du site et remplit le formulaire.</li><li>Le chèque est envoyé par e-mail.</li></ol></dd></div>
-      <div><dt>Texte de la pub</dt><dd>Le cadeau qui tombe juste : un chèque cadeau Stock Adventure, valable un an à Libramont et à Florenville, envoyé par e-mail.</dd></div>
-    </dl>
-  </div>
-  <div class="galerie">
-    <figure><img src="img/CHQ-1-CHEQUE-FIL.jpg" alt="Chèque cadeau, fil" loading="lazy"><figcaption><b>Fil</b></figcaption></figure>
-    <figure><img src="img/CHQ-1-CHEQUE-CARRE.jpg" alt="Chèque cadeau, carré" loading="lazy"><figcaption><b>Carré</b></figcaption></figure>
-    <figure><img src="img/CHQ-1-CHEQUE-STORY.jpg" alt="Chèque cadeau, story" loading="lazy"><figcaption><b>Story</b></figcaption></figure>
   </div>
 </section>
 
